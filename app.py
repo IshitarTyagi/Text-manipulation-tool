@@ -5,7 +5,11 @@ from transformers import pipeline
 app = Flask(__name__)
 
 # Initialize the Hugging Face summarization pipeline
-summarizer = pipeline("summarization")
+from transformers import pipeline
+
+# Explicitly specify the summarization model
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+
 
 @app.route('/')
 def index():

@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from transformers import pipeline
 
 # Initialize the Flask app
 app = Flask(__name__)

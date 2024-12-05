@@ -9,8 +9,6 @@ from transformers import pipeline
 
 # Explicitly specify the summarization model
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
